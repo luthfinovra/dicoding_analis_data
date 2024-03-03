@@ -1,2 +1,2 @@
 Link Repo: https://github.com/luthfinovra/dicoding_analis_data
-Link Streamlit Cloud: 
+Link Streamlit Cloud: https://f4ycvnkreza8ndocjzlmq2.streamlit.app/
