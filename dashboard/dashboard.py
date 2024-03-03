@@ -157,12 +157,12 @@ st.subheader('Project Akhir Belajar Analis Data dengan Pyton - Bangkit 2024')
 st.markdown('Berikut merupakan hasil analisis data E-Commerce Dataset untuk memenuhi tugas akhir course Belajar Analis Data dengan Pytho pada platform Dicoding')
 
 # Inisisasi Data yang sudah disimpan pada csv
-summary_revenue_df = pd.read_csv('./summary_revenue.csv')
-pendapatan_kategori_df = pd.read_csv('./pendapatan_kategori.csv')
-pendapatan_seller_df = pd.read_csv('./pendapatan_seller.csv')
+summary_revenue_df = pd.read_csv('dashboard/summary_revenue.csv')
+pendapatan_kategori_df = pd.read_csv('dashboard/pendapatan_kategori.csv')
+pendapatan_seller_df = pd.read_csv('dashboard/pendapatan_seller.csv')
 
 with st.sidebar:
-   st.image('.\shopping_cart_PNG38.png')
+   st.image('dashboard/shopping_cart_PNG38.png')
    
    # Get unique years and months
    unique_years = summary_revenue_df['year'].unique()
