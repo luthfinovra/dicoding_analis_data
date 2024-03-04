@@ -156,13 +156,20 @@ st.header('Analisis Data E-Commerce Public Dataset 🏪')
 st.subheader('Project Akhir Belajar Analis Data dengan Pyton - Bangkit 2024')
 st.markdown('Berikut merupakan hasil analisis data E-Commerce Dataset untuk memenuhi tugas akhir course Belajar Analis Data dengan Pytho pada platform Dicoding')
 
-# Inisisasi Data yang sudah disimpan pada csv
-summary_revenue_df = pd.read_csv('dashboard/summary_revenue.csv')
-pendapatan_kategori_df = pd.read_csv('dashboard/pendapatan_kategori.csv')
-pendapatan_seller_df = pd.read_csv('dashboard/pendapatan_seller.csv')
+import os
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+summary_revenue_df = pd.read_csv(os.path.join(current_dir, 'summary_revenue.csv'))
+pendapatan_kategori_df = pd.read_csv(os.path.join(current_dir, 'pendapatan_kategori.csv'))
+pendapatan_seller_df = pd.read_csv(os.path.join(current_dir, 'pendapatan_seller.csv'))
+
 
 with st.sidebar:
-   st.image('dashboard/shopping_cart_PNG38.png')
+   imageUrl = "https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvdjkzMi1uaW5nLTExLnBuZw.png?s=HqQZ8loDvME-F2BuvOtlJhp4Vp7rhz64aZTwR6PjGP0"
+   print(imageUrl)
+
+   st.image(imageUrl)
    
    # Get unique years and months
    unique_years = summary_revenue_df['year'].unique()
